@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android = "http://schemas.android.com/apk/res/android"
+            xmlns:app = "http://schemas.android.com/apk/res-auto"
+            xmlns:tools = "http://schemas.android.com/tools"
+            android:id = "@+id/android_navigation"
+            app:startDestination = "@+id/home_fragment">
+
+    <fragment
+        android:id = "@+id/home_fragment"
+        android:name = "com.example.androidnavigation.fragments.HomeFragment"
+        android:label = "Home"
+        tools:layout = "@layout/home_fragment">
+
+        <action
+            android:id = "@+id/action_goto1"
+            app:destination = "@id/first_page_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id = "@+id/profile_fragment"
+        android:name = "com.example.androidnavigation.fragments.ProfileFragment"
+        android:label = "Home"
+        tools:layout = "@layout/home_fragment"
+        />
+
+    <fragment
+        android:id = "@+id/settings_fragment"
+        android:name = "com.example.androidnavigation.fragments.SettingsFragment"
+        android:label = "Home"
+        tools:layout = "@layout/home_fragment"
+        />
+
+    <fragment
+        android:id = "@+id/first_page_fragment"
+        android:name = "com.example.androidnavigation.fragments.FirstPageFragment"
+        android:label = "First Page"
+        >
+        <action
+            android:id = "@+id/action_goto2"
+            app:destination = "@+id/second_page_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id = "@+id/second_page_fragment"
+        android:name = "com.example.androidnavigation.fragments.SecondPageFragment"
+        android:label = "Second Page"
+        >
+
+        <action
+            android:id="@+id/action_go_home"
+            app:popUpTo="@+id/home_fragment"
+            />
+    </fragment>
+</navigation>
