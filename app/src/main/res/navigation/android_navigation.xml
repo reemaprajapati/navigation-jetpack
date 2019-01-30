@@ -44,6 +44,7 @@
             app:argType = "integer"
             android:defaultValue = "1"
             />
+
         <action
             android:id = "@+id/action_go_home"
             app:destination = "@+id/last_page_fragment" />
@@ -55,6 +56,12 @@
         android:name = "com.example.androidnavigation.fragments.SecondPageFragment"
         tools:layout = "@layout/second_page_fragment"
         >
+
+        <argument
+            android:name = "myarg"
+            android:defaultValue = "Android!" />
+        <deepLink app:uri = "reema.com/{myarg}" />
+
         <action
             android:id = "@+id/action_go_home"
             app:destination = "@+id/last_page_fragment"
@@ -65,11 +72,6 @@
         android:id = "@+id/last_page_fragment"
         android:name = "com.example.androidnavigation.fragments.LastPageFragment"
         tools:layout = "@layout/lastpage_fragment">
-
-        <argument
-            android:name="myarg"
-            android:defaultValue="Android!"/>
-        <deepLink app:uri="reema.com/{myarg}" />
 
         <action
             android:id="@+id/action_go_home"
