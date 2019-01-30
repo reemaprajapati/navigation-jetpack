@@ -5,25 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.androidnavigation.R
 
-class FirstPageFragment : Fragment() {
+class LastPageFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         setHasOptionsMenu(true)
-        return inflater.inflate(R.layout.first_page_fragment, container, false)
+        return inflater.inflate(R.layout.lastpage_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        view.findViewById<Button>(R.id.btn_go_last_page)?.setOnClickListener(
+        view.findViewById<Button>(R.id.btn_go_home).setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_go_home)
         )
-        val safeArgs = FirstPageFragmentArgs.fromBundle(arguments)
-        val flowStepNumber = safeArgs.flowStepNumber
-        Toast.makeText(activity, "flowstep number $flowStepNumber", Toast.LENGTH_SHORT).show()
     }
 }

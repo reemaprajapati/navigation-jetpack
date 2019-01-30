@@ -8,45 +8,68 @@
     <fragment
         android:id = "@+id/home_fragment"
         android:name = "com.example.androidnavigation.fragments.HomeFragment"
-        android:label = "Home"
         tools:layout = "@layout/home_fragment">
 
         <action
             android:id = "@+id/action_goto1"
-            app:destination = "@id/first_page_fragment" />
+            app:destination = "@id/first_page_fragment">
+        </action>
+
+        <action
+            android:id = "@+id/action_goto2"
+            app:destination = "@id/second_page_fragment" />
 
     </fragment>
 
     <fragment
         android:id = "@+id/profile_fragment"
         android:name = "com.example.androidnavigation.fragments.ProfileFragment"
-        android:label = "Home"
         tools:layout = "@layout/home_fragment"
-        />
+        >
+    </fragment>
 
     <fragment
         android:id = "@+id/settings_fragment"
         android:name = "com.example.androidnavigation.fragments.SettingsFragment"
-        android:label = "Home"
         tools:layout = "@layout/home_fragment"
         />
 
     <fragment
         android:id = "@+id/first_page_fragment"
         android:name = "com.example.androidnavigation.fragments.FirstPageFragment"
-        android:label = "First Page"
+        tools:layout = "@layout/first_page_fragment"
         >
+        <argument
+            android:name = "flowStepNumber"
+            app:argType = "integer"
+            android:defaultValue = "1"
+            />
         <action
-            android:id = "@+id/action_goto2"
-            app:destination = "@+id/second_page_fragment" />
+            android:id = "@+id/action_go_home"
+            app:destination = "@+id/last_page_fragment" />
 
     </fragment>
 
     <fragment
         android:id = "@+id/second_page_fragment"
         android:name = "com.example.androidnavigation.fragments.SecondPageFragment"
-        android:label = "Second Page"
+        tools:layout = "@layout/second_page_fragment"
         >
+        <action
+            android:id = "@+id/action_go_home"
+            app:destination = "@+id/last_page_fragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/last_page_fragment"
+        android:name = "com.example.androidnavigation.fragments.LastPageFragment"
+        tools:layout = "@layout/lastpage_fragment">
+
+        <argument
+            android:name="myarg"
+            android:defaultValue="Android!"/>
+        <deepLink app:uri="reema.com/{myarg}" />
 
         <action
             android:id="@+id/action_go_home"

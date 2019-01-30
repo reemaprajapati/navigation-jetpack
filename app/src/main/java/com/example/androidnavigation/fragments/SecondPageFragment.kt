@@ -19,7 +19,7 @@ class SecondPageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.btn_go_home).setOnClickListener (
+        view.findViewById<Button>(R.id.btn_go_to_last).setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_go_home)
             )
     }
