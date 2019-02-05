@@ -25,21 +25,18 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.btn_click_me)?.setOnClickListener {
-//            sendArguments(view)
-            findNavController().navigate(R.id.first_page_fragment)
-//            Navigation.createNavigateOnClickListener(R.id.action_goto1)
+            sendArguments(view)
         }
 
         view.findViewById<Button>(R.id.btn_click_two)?.setOnClickListener {
             findNavController().navigate(R.id.second_page_fragment)
-//            Navigation.createNavigateOnClickListener(R.id.action_goto2)
         }
     }
 
     fun sendArguments(view: View) {
         var action: HomeFragmentDirections.ActionGoto1 =
             HomeFragmentDirections.actionGoto1()
-        action.setFlowStepNumber(1234)
+        action.setTestNumber(1234)
         Navigation.findNavController(view).navigate(action);
     }
 }

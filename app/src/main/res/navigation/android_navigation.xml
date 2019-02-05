@@ -40,7 +40,7 @@
         tools:layout = "@layout/first_page_fragment"
         >
         <argument
-            android:name = "flowStepNumber"
+            android:name = "testNumber"
             app:argType = "integer"
             android:defaultValue = "1"
             />

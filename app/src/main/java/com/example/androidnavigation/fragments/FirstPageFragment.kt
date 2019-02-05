@@ -23,7 +23,7 @@ class FirstPageFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_go_home)
         )
         val safeArgs = FirstPageFragmentArgs.fromBundle(arguments)
-        val flowStepNumber = safeArgs.flowStepNumber
-        Toast.makeText(activity, "flowstep number $flowStepNumber", Toast.LENGTH_SHORT).show()
+        val flowStepNumber = safeArgs.testNumber
+        Toast.makeText(activity, "testNumber number $flowStepNumber", Toast.LENGTH_SHORT).show()
     }
 }

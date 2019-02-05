@@ -10,6 +10,8 @@
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
         android:text="I am Settings"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf ="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="100dp"

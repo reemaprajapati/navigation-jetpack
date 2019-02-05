@@ -9,6 +9,8 @@
         android:layout_width = "match_parent"
         android:layout_height = "match_parent"
         android:text = "I am Profile"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf = "parent"
         app:layout_constraintStart_toStartOf = "parent"
         android:layout_marginTop = "100dp"
