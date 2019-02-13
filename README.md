@@ -1,3 +1,3 @@
 # navigation-jetpack
 
-Navigation in android (along with Deeplink) using Android Navigation Components.
+Navigation in android (along with Deeplink) using Navigation Architecture Components.
